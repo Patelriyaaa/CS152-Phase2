@@ -1,0 +1,31 @@
+function calculateFibonacci;
+begin
+  params
+    num: integer;
+  endparams
+  begin
+    locals
+    endlocals
+    begin
+      if (num <= 1) then return 1; endif;
+      return calculateFibonacci(num - 1) + calculateFibonacci(num - 2);
+    end
+  end
+end
+
+function main;
+begin
+  params
+  endparams
+  begin
+    locals
+      inputNumber: integer;
+      result: integer;
+    endlocals
+    begin
+      read inputNumber;
+      result := calculateFibonacci(inputNumber);
+      write result;
+    end
+  end
+end
